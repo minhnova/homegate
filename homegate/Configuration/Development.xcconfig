@@ -1,0 +1,10 @@
+//
+//  Development.xcconfig
+//  homegate
+//
+//  Created by Phai Hoang on 23/5/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+APP_ENVIRONMENT = development

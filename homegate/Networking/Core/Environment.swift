@@ -12,7 +12,18 @@ enum Environment {
     case production
     case staging
     
-    static let current: Environment = .development
+    static var current: Environment {
+        guard let raw = Bundle.main.object(forInfoDictionaryKey: "APP_ENVIRONMENT") as? String
+        else { return .development }
+        switch raw {
+        case "development":
+            return .development
+        case "staging":
+            return .staging
+        default:
+            return .production
+        }
+    }
     
     var baseURL: URL {
         switch self {
