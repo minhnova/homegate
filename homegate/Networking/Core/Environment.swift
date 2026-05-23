@@ -20,8 +20,10 @@ enum Environment {
             return .development
         case "staging":
             return .staging
-        default:
+        case "production":
             return .production
+        default:
+            return .development
         }
     }
     
